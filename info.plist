@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.lmy.currency</string>
+	<key>connections</key>
+	<dict>
+		<key>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>54A57051-F121-4E2D-A722-933F4A7A14F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>700B0F4D-C14A-4FA7-A146-F30FECE0361E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>96496AA7-5945-484B-885E-4B662F771283</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FFBA4269-02A7-4336-A9B3-C6CFB0342830</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Jeep Li</string>
+	<key>description</key>
+	<string>Any currency to RMB</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Currency Conversion</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>usd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import pycurl
+import StringIO
+import json
+import sys
+
+model="USD"
+url=pycurl.Curl()
+out=StringIO.StringIO()
+url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
+url.setopt(pycurl.WRITEFUNCTION,out.write)
+url.setopt(pycurl.FOLLOWLOCATION,1)
+url.perform()
+Convert_data=json.loads(out.getvalue())
+url.close()
+out.close()
+query={query}
+result=query/Convert_data["rates"][model]
+result='%.2f'%result
+
+print ("{\"items\": [{\"uid\": \"USD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>USD to CNY</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>FFBA4269-02A7-4336-A9B3-C6CFB0342830</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>hkd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import pycurl
+import StringIO
+import json
+import sys
+
+model="HKD"
+url=pycurl.Curl()
+out=StringIO.StringIO()
+url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
+url.setopt(pycurl.WRITEFUNCTION,out.write)
+url.setopt(pycurl.FOLLOWLOCATION,1)
+url.perform()
+Convert_data=json.loads(out.getvalue())
+url.close()
+out.close()
+query={query}
+result=query/Convert_data["rates"][model]
+result='%.2f'%result
+
+print ("{\"items\": [{\"uid\": \"HKD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>HKD to CNY</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>96496AA7-5945-484B-885E-4B662F771283</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>jpy</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import pycurl
+import StringIO
+import json
+import sys
+
+model="JPY"
+url=pycurl.Curl()
+out=StringIO.StringIO()
+url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
+url.setopt(pycurl.WRITEFUNCTION,out.write)
+url.setopt(pycurl.FOLLOWLOCATION,1)
+url.perform()
+Convert_data=json.loads(out.getvalue())
+url.close()
+out.close()
+query={query}
+result=query/Convert_data["rates"][model]
+result='%.2f'%result
+
+print ("{\"items\": [{\"uid\": \"JPY\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>JPY to CNY</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>gbp</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import pycurl
+import StringIO
+import json
+import sys
+
+model="GBP"
+url=pycurl.Curl()
+out=StringIO.StringIO()
+url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
+url.setopt(pycurl.WRITEFUNCTION,out.write)
+url.setopt(pycurl.FOLLOWLOCATION,1)
+url.perform()
+Convert_data=json.loads(out.getvalue())
+url.close()
+out.close()
+query={query}
+result=query/Convert_data["rates"][model]
+result='%.2f'%result
+
+print ("{\"items\": [{\"uid\": \"GBP\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>GBP to CNY</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>700B0F4D-C14A-4FA7-A146-F30FECE0361E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>eur</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import pycurl
+import StringIO
+import json
+import sys
+
+model="EUR"
+url=pycurl.Curl()
+out=StringIO.StringIO()
+url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
+url.setopt(pycurl.WRITEFUNCTION,out.write)
+url.setopt(pycurl.FOLLOWLOCATION,1)
+url.perform()
+Convert_data=json.loads(out.getvalue())
+url.close()
+out.close()
+query={query}
+result=query/Convert_data["rates"][model]
+result='%.2f'%result
+
+print ("{\"items\": [{\"uid\": \"EUR\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>EUR to CNY</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>54A57051-F121-4E2D-A722-933F4A7A14F3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>54A57051-F121-4E2D-A722-933F4A7A14F3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
+		<key>64D06D6C-F916-4D06-A11E-06614FCBD70F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>700B0F4D-C14A-4FA7-A146-F30FECE0361E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>96496AA7-5945-484B-885E-4B662F771283</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>FFBA4269-02A7-4336-A9B3-C6CFB0342830</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
