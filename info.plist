@@ -6,7 +6,7 @@
 	<string>com.lmy.currency</string>
 	<key>connections</key>
 	<dict>
-		<key>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</key>
+		<key>eur</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -19,7 +19,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>54A57051-F121-4E2D-A722-933F4A7A14F3</key>
+		<key>gbp</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -32,7 +32,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>700B0F4D-C14A-4FA7-A146-F30FECE0361E</key>
+		<key>hkd</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -45,7 +45,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>96496AA7-5945-484B-885E-4B662F771283</key>
+		<key>jpy</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -58,7 +58,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>FFBA4269-02A7-4336-A9B3-C6CFB0342830</key>
+		<key>usd</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -140,7 +140,7 @@ print ("{\"items\": [{\"uid\": \"USD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>FFBA4269-02A7-4336-A9B3-C6CFB0342830</string>
+			<string>usd</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -202,7 +202,24 @@ print ("{\"items\": [{\"uid\": \"HKD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>96496AA7-5945-484B-885E-4B662F771283</string>
+			<string>hkd</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -264,24 +281,7 @@ print ("{\"items\": [{\"uid\": \"JPY\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
+			<string>jpy</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -343,7 +343,7 @@ print ("{\"items\": [{\"uid\": \"GBP\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>700B0F4D-C14A-4FA7-A146-F30FECE0361E</string>
+			<string>gbp</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -405,7 +405,7 @@ print ("{\"items\": [{\"uid\": \"EUR\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>54A57051-F121-4E2D-A722-933F4A7A14F3</string>
+			<string>eur</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -414,20 +414,6 @@ print ("{\"items\": [{\"uid\": \"EUR\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>29A0B24A-CC9A-4639-B1F8-B7C820C27D0B</key>
-		<dict>
-			<key>xpos</key>
-			<integer>130</integer>
-			<key>ypos</key>
-			<integer>230</integer>
-		</dict>
-		<key>54A57051-F121-4E2D-A722-933F4A7A14F3</key>
-		<dict>
-			<key>xpos</key>
-			<integer>130</integer>
-			<key>ypos</key>
-			<integer>450</integer>
-		</dict>
 		<key>64D06D6C-F916-4D06-A11E-06614FCBD70F</key>
 		<dict>
 			<key>colorindex</key>
@@ -437,21 +423,35 @@ print ("{\"items\": [{\"uid\": \"EUR\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 			<key>ypos</key>
 			<integer>230</integer>
 		</dict>
-		<key>700B0F4D-C14A-4FA7-A146-F30FECE0361E</key>
+		<key>eur</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
+		<key>gbp</key>
 		<dict>
 			<key>xpos</key>
 			<integer>130</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
-		<key>96496AA7-5945-484B-885E-4B662F771283</key>
+		<key>hkd</key>
 		<dict>
 			<key>xpos</key>
 			<integer>130</integer>
 			<key>ypos</key>
 			<integer>120</integer>
 		</dict>
-		<key>FFBA4269-02A7-4336-A9B3-C6CFB0342830</key>
+		<key>jpy</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>usd</key>
 		<dict>
 			<key>xpos</key>
 			<integer>130</integer>
