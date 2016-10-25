@@ -104,26 +104,8 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import pycurl
-import StringIO
-import json
-import sys
-
-model="USD"
-url=pycurl.Curl()
-out=StringIO.StringIO()
-url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
-url.setopt(pycurl.WRITEFUNCTION,out.write)
-url.setopt(pycurl.FOLLOWLOCATION,1)
-url.perform()
-Convert_data=json.loads(out.getvalue())
-url.close()
-out.close()
-query={query}
-result=query/Convert_data["rates"][model]
-result='%.2f'%result
-
-print ("{\"items\": [{\"uid\": \"USD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<string>import convert
+print convert.convert("USD",{query})</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -166,26 +148,8 @@ print ("{\"items\": [{\"uid\": \"USD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import pycurl
-import StringIO
-import json
-import sys
-
-model="HKD"
-url=pycurl.Curl()
-out=StringIO.StringIO()
-url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
-url.setopt(pycurl.WRITEFUNCTION,out.write)
-url.setopt(pycurl.FOLLOWLOCATION,1)
-url.perform()
-Convert_data=json.loads(out.getvalue())
-url.close()
-out.close()
-query={query}
-result=query/Convert_data["rates"][model]
-result='%.2f'%result
-
-print ("{\"items\": [{\"uid\": \"HKD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<string>import convert
+print convert.convert("HKD",{query})</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -245,26 +209,8 @@ print ("{\"items\": [{\"uid\": \"HKD\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import pycurl
-import StringIO
-import json
-import sys
-
-model="JPY"
-url=pycurl.Curl()
-out=StringIO.StringIO()
-url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
-url.setopt(pycurl.WRITEFUNCTION,out.write)
-url.setopt(pycurl.FOLLOWLOCATION,1)
-url.perform()
-Convert_data=json.loads(out.getvalue())
-url.close()
-out.close()
-query={query}
-result=query/Convert_data["rates"][model]
-result='%.2f'%result
-
-print ("{\"items\": [{\"uid\": \"JPY\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<string>import convert
+print convert.convert("JPY",{query})</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -307,26 +253,8 @@ print ("{\"items\": [{\"uid\": \"JPY\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import pycurl
-import StringIO
-import json
-import sys
-
-model="GBP"
-url=pycurl.Curl()
-out=StringIO.StringIO()
-url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
-url.setopt(pycurl.WRITEFUNCTION,out.write)
-url.setopt(pycurl.FOLLOWLOCATION,1)
-url.perform()
-Convert_data=json.loads(out.getvalue())
-url.close()
-out.close()
-query={query}
-result=query/Convert_data["rates"][model]
-result='%.2f'%result
-
-print ("{\"items\": [{\"uid\": \"GBP\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<string>import convert
+print convert.convert("GBP",{query})</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -369,26 +297,8 @@ print ("{\"items\": [{\"uid\": \"GBP\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import pycurl
-import StringIO
-import json
-import sys
-
-model="EUR"
-url=pycurl.Curl()
-out=StringIO.StringIO()
-url.setopt(pycurl.URL,'http://api.fixer.io/latest?base=CNY&amp;symbols=%s'%model)
-url.setopt(pycurl.WRITEFUNCTION,out.write)
-url.setopt(pycurl.FOLLOWLOCATION,1)
-url.perform()
-Convert_data=json.loads(out.getvalue())
-url.close()
-out.close()
-query={query}
-result=query/Convert_data["rates"][model]
-result='%.2f'%result
-
-print ("{\"items\": [{\"uid\": \"EUR\",\"arg\":\"%s\",\"title\": \"%s\",\"icon\": {\"path\":\"%s.png\"}}]}"%(result,result,model))</string>
+				<string>import convert
+print convert.convert("EUR",{query})</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
