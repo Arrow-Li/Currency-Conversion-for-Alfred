@@ -1,7 +1,7 @@
-# 把任意货币转换成人民币的Workflow
+# Convert Any Currency to RMB
 > Convert API from [fixer-io](https://github.com/hakanensari/fixer-io)  
-## 需求
+## Require
 * Alfred3
 * Pycurl
-## 截图
+## Screenshot
 <img src="https://raw.githubusercontent.com/Arrow-Li/Currency-Conversion-for-Alfred/master/ScreenShot.png" width = "50%" height = "50%" alt="ScreenShot" align=center/>
