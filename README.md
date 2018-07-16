@@ -1,5 +1,5 @@
 # Convert Any Currency to RMB
-> Convert API from [fixer-io](https://github.com/hakanensari/fixer-io)  
+> Convert API from [Forex](https://1forge.com/forex-data-api)  
 ## Require
 * Alfred3
 * Pycurl
