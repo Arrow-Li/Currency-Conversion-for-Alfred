@@ -87,6 +87,12 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -96,7 +102,7 @@
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -104,18 +110,17 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import convert
-print convert.convert("USD",{query})</string>
+				<string>./convert USD $1 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>convert</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
 				<string>USD to CNY</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -124,13 +129,19 @@ print convert.convert("USD",{query})</string>
 			<key>uid</key>
 			<string>usd</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -140,7 +151,7 @@ print convert.convert("USD",{query})</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -148,10 +159,9 @@ print convert.convert("USD",{query})</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import convert
-print convert.convert("HKD",{query})</string>
+				<string>./convert HKD $1 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -159,7 +169,7 @@ print convert.convert("HKD",{query})</string>
 				<key>title</key>
 				<string>HKD to CNY</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -168,7 +178,7 @@ print convert.convert("HKD",{query})</string>
 			<key>uid</key>
 			<string>hkd</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -177,6 +187,8 @@ print convert.convert("HKD",{query})</string>
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -185,13 +197,19 @@ print convert.convert("HKD",{query})</string>
 			<key>uid</key>
 			<string>64D06D6C-F916-4D06-A11E-06614FCBD70F</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -201,7 +219,7 @@ print convert.convert("HKD",{query})</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -209,10 +227,9 @@ print convert.convert("HKD",{query})</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import convert
-print convert.convert("JPY",{query})</string>
+				<string>./convert JPY $1 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -220,7 +237,7 @@ print convert.convert("JPY",{query})</string>
 				<key>title</key>
 				<string>JPY to CNY</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -229,13 +246,19 @@ print convert.convert("JPY",{query})</string>
 			<key>uid</key>
 			<string>jpy</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -245,7 +268,7 @@ print convert.convert("JPY",{query})</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -253,10 +276,9 @@ print convert.convert("JPY",{query})</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import convert
-print convert.convert("GBP",{query})</string>
+				<string>./convert GBP $1 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -264,7 +286,7 @@ print convert.convert("GBP",{query})</string>
 				<key>title</key>
 				<string>GBP to CNY</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -273,13 +295,19 @@ print convert.convert("GBP",{query})</string>
 			<key>uid</key>
 			<string>gbp</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -289,7 +317,7 @@ print convert.convert("GBP",{query})</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -297,10 +325,9 @@ print convert.convert("GBP",{query})</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>import convert
-print convert.convert("EUR",{query})</string>
+				<string>./convert EUR $1 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -308,7 +335,7 @@ print convert.convert("EUR",{query})</string>
 				<key>title</key>
 				<string>EUR to CNY</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -317,7 +344,7 @@ print convert.convert("EUR",{query})</string>
 			<key>uid</key>
 			<string>eur</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
